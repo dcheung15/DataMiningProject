@@ -8,7 +8,7 @@ from alpha_vantage.timeseries import TimeSeries
 # Your key here
 key = '2Z7954OEL53VNE1Z'
 ts = TimeSeries(key)
-aapl, meta = ts.get_daily(symbol='AAPL')
+aapl, meta = ts.get_daily(symbol='TWTR')
 print(aapl['2020-04-16'])
 
 
