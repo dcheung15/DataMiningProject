@@ -6,10 +6,10 @@ import twitter
 from textblob import TextBlob
 
 def oauth_login():
-    CONSUMER_KEY = 'FAJuwVnhJ1XR0mbkCdLfZB64x'
-    CONSUMER_SECRET = 'wiB7VK2QATNxTCwRm0PWQhFm2MkNxWCDEdLfAy4jnNtDzzfPmH'
-    OAUTH_TOKEN = '710158731-eaXDCt9V0JJGTWBrqikHGlyYIMuCaIhTLwaHicBn'
-    OAUTH_TOKEN_SECRET = 'zNem0CaRPIpXOQFVJU88kwg0JiGFmWCIk8PKxKxqCWKdn'
+    CONSUMER_KEY = 'yYHRFNY1Bm8RXSHHhVf9QPDbA'
+    CONSUMER_SECRET = 'Ok6PDfokRnxGlVgOtNJIZozXuOOuzSBrDerwA8o3bk1ED2Otx6'
+    OAUTH_TOKEN = '1222252081064611846-Npx1OJC7juZZrKmIyMMGO6oDXJKzdb'
+    OAUTH_TOKEN_SECRET = 'iPPC5gJzkqdN3457khiIOh37Mbt1fMlPeIFzkVQHmMege'
 
     auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET,
                                CONSUMER_KEY, CONSUMER_SECRET)
@@ -22,7 +22,7 @@ twitter_api = oauth_login()
 twitter_stream = twitter.TwitterStream(auth=twitter_api.auth)
 #Starting point (company)
 
-company = '$AMZN'
+company = '$TSLA'
 stream = twitter_stream.statuses.filter(track=company)
 
 totalPolarity = 0
