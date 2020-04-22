@@ -4,6 +4,7 @@
 #imports needed
 import twitter
 from textblob import TextBlob
+import datetime
 
 def oauth_login():
     CONSUMER_KEY = 'yYHRFNY1Bm8RXSHHhVf9QPDbA'
