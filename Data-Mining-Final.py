@@ -22,16 +22,17 @@ def oauth_login():
 twitter_api = oauth_login()
 twitter_stream = twitter.TwitterStream(auth=twitter_api.auth)
 
-<<<<<<< HEAD
-company = '$NFLX'
-=======
+
+company = '$AAL'
+
 #starting time
 firstDT = datetime.datetime.now()
 print("Start time:",str(firstDT))
 
 #Starting point (company)
-company = '$TSLA'
->>>>>>> 5fe19e99151ad2fee515275c32bac649f06d072d
+company = '$AAL'
+
+#>>>>>>> 5fe19e99151ad2fee515275c32bac649f06d072d
 stream = twitter_stream.statuses.filter(track=company)
 
 totalPolarity = 0
