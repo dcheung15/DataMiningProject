@@ -22,7 +22,7 @@ twitter_api = oauth_login()
 twitter_stream = twitter.TwitterStream(auth=twitter_api.auth)
 #Starting point (company)
 
-company = '$TSLA'
+company = '$NFLX'
 stream = twitter_stream.statuses.filter(track=company)
 
 totalPolarity = 0
@@ -35,7 +35,7 @@ for tweet in stream:
     blobText = TextBlob(text)
     polarity, subjectivity = blobText.sentiment
     totalPolarity += polarity
-    if (tweetsCounted > 15):
+    if (tweetsCounted > 30):
         break
 
 print("The total polarity of ", company, " is: ", totalPolarity)
