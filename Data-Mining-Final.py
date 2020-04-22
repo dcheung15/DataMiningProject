@@ -4,6 +4,7 @@
 #imports needed
 import twitter
 from textblob import TextBlob
+import datetime
 
 def oauth_login():
     CONSUMER_KEY = 'yYHRFNY1Bm8RXSHHhVf9QPDbA'
@@ -20,9 +21,17 @@ def oauth_login():
 
 twitter_api = oauth_login()
 twitter_stream = twitter.TwitterStream(auth=twitter_api.auth)
-#Starting point (company)
 
+<<<<<<< HEAD
 company = '$NFLX'
+=======
+#starting time
+firstDT = datetime.datetime.now()
+print("Start time:",str(firstDT))
+
+#Starting point (company)
+company = '$TSLA'
+>>>>>>> 5fe19e99151ad2fee515275c32bac649f06d072d
 stream = twitter_stream.statuses.filter(track=company)
 
 totalPolarity = 0
@@ -41,9 +50,21 @@ for tweet in stream:
 print("The total polarity of ", company, " is: ", totalPolarity)
 if (totalPolarity > 0):
     print("Looks like the stock might go up today")
+    print("Number of tweets: ", tweetsCounted)
 if (totalPolarity < 0):
     print("Looks like the stock might go down today")
+    print("Number of tweets: ", tweetsCounted)
 if (totalPolarity == 0):
     print("Looks like the stock will stay the same same today")
+    print("Number of tweets: ", tweetsCounted)
 
-    
+#trending words when stocks go negative/positive
+
+
+#correlation
+
+
+#end date time
+lastDT = datetime.datetime.now()
+print("End time:", str(lastDT))
+print("Total Time:", str(lastDT-firstDT))
