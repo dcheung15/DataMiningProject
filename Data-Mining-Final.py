@@ -23,14 +23,14 @@ twitter_api = oauth_login()
 twitter_stream = twitter.TwitterStream(auth=twitter_api.auth)
 
 
-company = '$AAL'
+company = '$NFLX'
 
 #starting time
 firstDT = datetime.datetime.now()
 print("Start time:",str(firstDT))
 
 #Starting point (company)
-company = '$AAL'
+#company = '$AAL'
 
 #>>>>>>> 5fe19e99151ad2fee515275c32bac649f06d072d
 stream = twitter_stream.statuses.filter(track=company)
