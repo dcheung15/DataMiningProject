@@ -108,4 +108,10 @@ plt.tight_layout()
 plt.grid()
 plt.show()
 
+# Was originally used for testing
+#filewrite = open(date+".txt", 'w')
+#filewrite.write(aapl_data)
+#np.savetxt(r'c:\data\np.txt',aapl_data.get_values())
+#filewrite.close()
+
 
